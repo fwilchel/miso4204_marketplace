@@ -36,7 +36,7 @@ define(['model/_scoreModel'], function() {
                 validationMessage = "The name can't be empty.";
             }
             if(validationMessage.length>0){
-               return validationMessage;
+               return validationMessage; 
             }
         }
 

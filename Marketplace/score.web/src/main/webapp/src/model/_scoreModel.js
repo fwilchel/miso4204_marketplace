@@ -47,6 +47,7 @@ define([], function() {
                    var dateConverter = App.Utils.Converter.date;
                    return dateConverter.unserialize(this.get('date'), this);
              }
+             alert('test2');
 			 if(name=='userId'){  
                  var value = App.Utils.getModelFromCache('buyerComponent',this.get('userId'));
                  if(value) 

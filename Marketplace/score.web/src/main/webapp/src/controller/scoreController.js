@@ -32,4 +32,4 @@ define(['controller/_scoreController','delegate/scoreDelegate'], function() {
 
     });
     return App.Controller.ScoreController;
-}); 
+});  

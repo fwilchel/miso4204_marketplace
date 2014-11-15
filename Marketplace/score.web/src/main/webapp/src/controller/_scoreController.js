@@ -151,6 +151,7 @@ define(['model/scoreModel'], function(scoreModel) {
             }    
                 listReady();
             };
+            
 				App.Utils.getComponentList('buyerComponent',listDataReady,'userComponent');
 				App.Utils.getComponentList('productComponent',listDataReady,'productScoreComponent');
         },
