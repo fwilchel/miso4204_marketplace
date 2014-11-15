@@ -32,7 +32,7 @@ define(['delegate/_purchaseDelegate'], function() {
         search: function(purchase, callback, callbackError) {
               console.log('llama servicio:');
               $.ajax({
-                  url: '/purchase.web/webresources/purchases/',
+                  url: '/purchase.services/webresources/purchases/',
                   type: 'GET',
                   data: $.param(purchase),
                   contentType: 'application/json'

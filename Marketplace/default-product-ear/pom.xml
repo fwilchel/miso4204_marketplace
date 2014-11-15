@@ -4,7 +4,7 @@
   <groupId>co.edu.uniandes.csw.miso4204</groupId>
   <artifactId>default-product-ear</artifactId>
   <version>1.0</version>
-  <packaging>ear</packaging>
+  <packaging>war</packaging>
 
   <name>product-spl-ear</name>
 
@@ -35,7 +35,7 @@
     </plugins>
   </build>
     <dependencies>
-        <dependency>
+        <!--dependency>
             <groupId>co.edu.uniandes.csw.miso4204</groupId>
             <artifactId>product.web</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -243,7 +243,20 @@
             <groupId>co.edu.uniandes.csw.miso4204</groupId>
             <artifactId>wishlistitem.service.subsystem</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency-->
+        
+        <dependency>
+            <groupId>co.edu.uniandes.csw.miso4204</groupId>
+            <artifactId>score.web</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>co.edu.uniandes.csw.miso4204</groupId>
+            <artifactId>score.service.subsystem</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>			  
+        
     
     </dependencies>
 </project>

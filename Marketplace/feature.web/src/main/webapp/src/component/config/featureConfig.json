@@ -4,7 +4,7 @@
     "templateName" : "feature",
     "url" : "user.html",
     "server": "localhost:8080",
-	"context": "/feature.web/webresources/features",
+	"context": "/feature.services/webresources/features",
       
     "el" : "#main"
 }

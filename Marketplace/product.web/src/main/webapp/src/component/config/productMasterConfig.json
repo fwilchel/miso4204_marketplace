@@ -6,7 +6,7 @@
     "server": "localhost:8080",
     "server": "localhost:8080",
     
-    "context": "/product.web/webresources/master/products",
+    "context": "/product.services/webresources/master/products",
        
     
     "el" : "#main"

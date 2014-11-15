@@ -4,7 +4,7 @@
     "templateName" : "picture",
     "url" : "user.html",
     "server": "localhost:8080",
-	"context": "/picture.web/webresources/pictures",
+	"context": "/picture.services/webresources/pictures",
       
     "el" : "#main"
 }

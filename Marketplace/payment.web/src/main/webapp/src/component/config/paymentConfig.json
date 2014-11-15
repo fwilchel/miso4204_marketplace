@@ -4,7 +4,7 @@
     "templateName" : "payment",
     "url" : "user.html",
     "server": "localhost:8080",
-	"context": "/payment.web/webresources/payments",
+	"context": "/payment.services/webresources/payments",
       
     "el" : "#main"
 }
