@@ -26,9 +26,12 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                   displayName: 'Ver calificaciones',
                  show: true
              },
-             this.addItem,
+             this.productScore,
              this);
-            
+        },
+        productScore : function(){
+            var items = this.productComponent.getSelectedRecords();
+            document.location.href = "http://localhost:8080/score.web/listScore.html";
         }
     });
 

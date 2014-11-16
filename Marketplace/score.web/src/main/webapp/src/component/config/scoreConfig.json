@@ -1,10 +1,9 @@
 {
-    "displayName" : "Score",
-    "name" : "score",
-    "templateName" : "score",
-    "url" : "user.html",
+    "displayName": "Score",
+    "name": "score",
+    "templateName": "score",
+    "url": "user.html",
     "server": "localhost:8080",
-	"context": "/score.services/webresources/scores",
-      
-    "el" : "#main"
+    "context": "/score.services/webresources/scores",
+    "el": "#main"
 }
