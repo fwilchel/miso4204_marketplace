@@ -101,4 +101,15 @@ public abstract class _ScorePersistence{
 		entityManager.getTransaction().commit();
 	}
 
+	public ScorePageDTO getProductScores(Long productId) {
+		entityManager.getTransaction().begin();
+
+		Query q = entityManager.createQuery("select u from ScoreEntity u WHERE u.productscoreId=:productId");
+                q.setParameter("productId", productId);
+		ScorePageDTO response = new ScorePageDTO();
+		response.setRecords(ScoreConverter.entity2PersistenceDTOList(q.getResultList()));
+		entityManager.getTransaction().commit();
+		return response;
+	}
+        
 }
