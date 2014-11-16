@@ -75,8 +75,8 @@ public abstract class _ScoreService {
 	}
         
         @GET
-	@Path("/score/id_product={id}")
-	public ScorePageDTO getProductScores(@PathParam("id") Long id){
+        @Path("/score")
+	public ScorePageDTO getProductScores(@QueryParam("productId") Long id){
 		return scoreLogicService.getProductScores(id);
 	}
 	
