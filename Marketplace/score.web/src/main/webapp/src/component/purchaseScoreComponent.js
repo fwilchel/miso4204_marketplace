@@ -24,7 +24,6 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                     show: true 
                 },
                 _.bind(function(evt){ this.PuchaseItemScore(evt); }, this),
-                //this.PuchaseItemScore,
                 this
             );            
         },
@@ -89,7 +88,7 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                     //this.productComponent.clearSelectedRecords();
                     //this.render();
             
-            this.scoreComponent.render('Main');            
+            this.scoreComponent.render('ScoreMain');            
         },       
     });
 
