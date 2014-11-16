@@ -8,7 +8,12 @@
     <packaging>war</packaging>
     <dependencies>
     	<!-- embedded glassfish 3.1.2 --> 
-
+        <dependency>
+            <groupId>co.edu.uniandes.csw.miso4204</groupId>
+            <artifactId>purchase.web</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
         <dependency>
             <groupId>co.edu.uniandes.csw.miso4204</groupId>
             <artifactId>product.web</artifactId>
