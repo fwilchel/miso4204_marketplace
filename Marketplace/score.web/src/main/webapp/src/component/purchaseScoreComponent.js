@@ -28,14 +28,16 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
             );            
         },
         PuchaseItemScore : function(obj){
+            $("#ScoreMain").empty();
             this.scoreComponent = new ScoreComponent();
             this.scoreComponent.initialize();
+            this.scoreComponent.clearCache();
             //this.scoreComponent.masterComponent.clearGlobalActions();
             //var listItems = JSON.stringify(this.purchaseMasterComponent.purchaseItemComponent.getSelectedRecords());
             //console.log(listItems);
-
+                       
             var pItems = this.purchaseMasterComponent.purchaseItemComponent.listComponent.listController.model.attributes.data;              
-            datos = pItems;
+            //datos = pItems;
             id = obj.id;
             var pItem = null;
                      
@@ -46,21 +48,30 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                 }
             }                                  
             this.scoreComponent.clearGlobalActions();
-                        
+            
+            /*
+            var params = '{"productId":"' + pItem.attributes.productId + '","buyerId": "' + 1 + '"}';
+            var PObj = JSON.parse(params);
+            console.log(PObj);
+*/
+          
+           this.scoreComponent.componentController.currentModel = new this.scoreComponent.modelClass({componentId: this.scoreComponent.componentId,productscoreId:pItem.attributes.productId });           
+
+/*
            this.scoreComponent.toolbarComponent.addButton({
                 name: 'create',
                 icon: 'glyphicon-plus',
-                displayName: 'Create',
+                displayName: 'create',
                 show: true
             },
             this.scoreComponent.create,
-            this.scoreComponent);
-            
+                    this.scoreComponent);*/
+   
            this.scoreComponent.toolbarComponent.addButton({
                 name: 'save',
                 icon: 'glyphicon-floppy-disk',
                 displayName: 'Save',
-                show: false
+                show: true
             },
             this.scoreComponent.save,
                     this.scoreComponent);
@@ -69,7 +80,7 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                 name: 'cancel',
                 icon: 'glyphicon-remove-sign',
                 displayName: 'Cancel',
-                show: false
+                show: true
             },
             this.scoreComponent.cancel,
                     this.scoreComponent);
@@ -88,8 +99,10 @@ define(['controller/selectionController', 'model/cacheModel', 'component/_CRUDCo
                     //this.productComponent.clearSelectedRecords();
                     //this.render();
             
-            this.scoreComponent.render('ScoreMain');            
-        },       
+            this.scoreComponent.render('ScoreMain');
+            this.scoreComponent.componentController._renderEdit();
+            
+        }      
     });
 
     return App.Component.CompositeComponent;
